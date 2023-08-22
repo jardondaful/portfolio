@@ -11,15 +11,15 @@ function App() {
       </header>
 
       {/* About Section */}
-      <section className="about-section">
+      <section className="about-section section-fade">
         <h2>About Me</h2>
         <p>
-          Welcome to my portfolio! I am a passionate web developer and computer scientist with a strong foundation in computer science and engineering. I love creating user-friendly and innovative web applications.
+          I am a passionate web developer that is most interested in optimizing the user's experience
         </p>
       </section>
 
       {/* Projects Section */}
-      <section className="projects-section">
+      <section className="projects-section section-fade">
         <h2>Projects</h2>
         <div className="project">
           <h3>Project Name 1</h3>
@@ -33,10 +33,10 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section className="contact-section">
+      <section className="contact-section section-fade">
         <h2>Contact Me</h2>
         <p>If you're interested in collaborating or have any questions, feel free to get in touch!</p>
-        <a href="mailto:your.email@example.com">jordanjlin2003@gmail.com</a>
+        <a href="mailto:jordanjlin2003@gmail.com">jordanjlin2003@gmail.com</a>
       </section>
     </div>
   );
