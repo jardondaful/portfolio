@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-
+import images from './images'
 function App() {
   return (
     <div className="App">
       {/* Header */}
-      <header className="App-header">
+      <header className="App-header section-fade">
         <h1>Jordan Lin</h1>
         <p>Frontend Web Application Developer</p>
       </header>
@@ -14,7 +14,7 @@ function App() {
       <section className="about-section section-fade">
         <h2>About Me</h2>
         <p>
-          I am a passionate web developer that is most interested in optimizing the user's experience
+          Hello! I am a passionate web developer that loves making applications easier to use and more visually appealing to potential users.
         </p>
       </section>
 
@@ -22,11 +22,8 @@ function App() {
       <section className="projects-section section-fade">
         <h2>Projects</h2>
         <div className="project">
-          <h3>Project Name 1</h3>
-          <p>Short project description goes here.</p>
-        </div>
-        <div className="project">
-          <h3>Project Name 2</h3>
+          <h3>TrailMatch: Hiking Made Easy</h3>
+          <img src={images.trailmatchImage} alt="TrailMatch Project" style={{ width: '100%', display: 'block', margin: '0 auto' }}/>
           <p>Short project description goes here.</p>
         </div>
         {/* Add more projects here */}
@@ -43,3 +40,7 @@ function App() {
 }
 
 export default App;
+
+
+
+
