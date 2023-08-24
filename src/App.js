@@ -38,7 +38,13 @@ function App() {
              a new user can use the website to view what each restaurant/take-out option is serving, view their respective ratings, and even make them themselves. </p>
         </div>
         <div className = "project">
-          <h3>UCLA DMA Printlab Interface</h3>
+          <h3>California Cities Weather Dashboard</h3>
+          <img src={images.DashboardImage} alt="DasbhoardImage" style={{ width: '100%', display: 'block', margin: '0 auto', borderRadius: '10px' }}/>
+          <p>test</p>
+        </div>
+        <div className = "project">
+          <h3>LA Cell Towers Explorer</h3>
+          <img src={images.CellTowersImage} alt="CellImage" style={{ width: '100%', display: 'block', margin: '0 auto', borderRadius: '10px' }}/>
           <p>test</p>
         </div>
       </section>
