@@ -135,3 +135,35 @@ body {
     transform: translateY(0);
   }
 }
+
+.slideshow-container {
+  position: relative;
+}
+
+.arrow-button {
+  background: rgba(216, 216, 216, 0.5); /* Translucent white circle */
+  border: none;
+  font-size: 24px; /* Bold arrow size */
+  color: black;
+  padding: 10px;
+  border-radius: 50%; /* Makes the button a circle */
+  cursor: pointer;
+  position: absolute; /* Absolute positioning to place arrows on the image */
+}
+
+.left-arrow {
+  left: 0; /* Left edge */
+  top: 50%; /* Middle of the container */
+  transform: translateY(-50%); /* Centers the button vertically */
+}
+
+.right-arrow {
+  right: 0; /* Right edge */
+  top: 50%; /* Middle of the container */
+  transform: translateY(-50%); /* Centers the button vertically */
+}
+
+.slideshow-container {
+  position: relative; /* Relative positioning to contain the arrow buttons */
+  display: inline-block; /* Wraps the content to fit the image */
+}
