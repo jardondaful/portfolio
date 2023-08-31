@@ -36,7 +36,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
-  max-width: 800px;
+  max-width: 1600px;
 }
 
 .about-section h2 {
@@ -58,7 +58,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
-  max-width: 800px;
+  max-width: 1600px;
 }
 
 .projects-section h2 {
@@ -73,7 +73,14 @@ body {
   color: #333;
 }
 
+.project-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px; /* Adjust margin as needed */
+}
+
 .project {
+  width: calc(50% - 10px); /* Adjust spacing between projects as needed */
   border: 1px solid #ddd;
   padding: 15px;
   margin: 15px 0;
@@ -92,7 +99,6 @@ body {
   margin-top: 20px;
 }
 
-
 /* Corresponding Contact section styles */
 .contact-section {
   background-color: #f9f9f9;
@@ -100,7 +106,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
-  max-width: 800px;
+  max-width: 1600px;
 }
 
 .contact-section h2 {
@@ -136,34 +142,35 @@ body {
   }
 }
 
+/* Slideshow container styles */
 .slideshow-container {
   position: relative;
 }
 
 .arrow-button {
-  background: rgba(216, 216, 216, 0.5); /* Translucent white circle */
+  background: rgba(216, 216, 216, 0.5);
   border: none;
-  font-size: 24px; /* Bold arrow size */
+  font-size: 24px;
   color: black;
   padding: 10px;
-  border-radius: 50%; /* Makes the button a circle */
+  border-radius: 50%;
   cursor: pointer;
-  position: absolute; /* Absolute positioning to place arrows on the image */
+  position: absolute;
 }
 
 .left-arrow {
-  left: 0; /* Left edge */
-  top: 50%; /* Middle of the container */
-  transform: translateY(-50%); /* Centers the button vertically */
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .right-arrow {
-  right: 0; /* Right edge */
-  top: 50%; /* Middle of the container */
-  transform: translateY(-50%); /* Centers the button vertically */
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .slideshow-container {
-  position: relative; /* Relative positioning to contain the arrow buttons */
-  display: inline-block; /* Wraps the content to fit the image */
+  position: relative;
+  display: inline-block;
 }
