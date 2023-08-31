@@ -13,8 +13,9 @@ function App() {
     const newIndex = trailMatchIndex + offset;
     // Ensure index is within bounds of the images array
     setTrailMatchIndex((newIndex + trailMatchImages.length) % trailMatchImages.length);
-  };
 
+  };
+  
   return (
     <div className="App">
       {/* Header */}
@@ -27,7 +28,7 @@ function App() {
       <section className="about-section section-fade">
         <h2>About Me</h2>
         <p>
-          Hello! I am a passionate web developer that loves making applications easier to use and more visually appealing to potential users.
+          Hello! I'm an enthusiastic web developer dedicated to enhancing user experiences and creating visually captivating applications. I specialize in integrating Esri GIS products to vividly represent natural phenomena and modernizing existing applications to align with current market demands. With my versatile background in software development, UI/UX design, and GIS, I can contribute meaningfully and make a difference in various settings.
         </p>
       </section>
 

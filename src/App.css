@@ -121,20 +121,34 @@ body {
   color: #007bff;
   text-decoration: none;
 }
-
-/* Section with fade-in animation */
+/* Section with splat animation */
 .section-fade {
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s ease-in-out forwards;
+  margin-top: 50px; /* Initial margin */
+  animation: splatFadeIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
 }
 
-@keyframes fadeInUp {
-  to {
+@keyframes splatFadeIn {
+  0% {
+    opacity: 0;
+    margin-top: 20px; /* Initial margin */
+  }
+  60% {
     opacity: 1;
-    transform: translateY(0);
+    margin-top: -10px; /* Adjust the margin to create the splat effect */
+  }
+  100% {
+    opacity: 1;
+    margin-top: 11px; /* Reset the margin to return to the very top */
   }
 }
+
+
+/* Adjust the section to return to its original position */
+.section-fade.animation-finished {
+  transform: none;
+}
+
 
 .slideshow-container {
   position: relative;
