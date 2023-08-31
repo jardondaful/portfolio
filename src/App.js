@@ -28,16 +28,16 @@ function App() {
       <section className="projects-section section-fade">
         <h2>Projects</h2>
         <div className="project-group">
-          <div className="project">
-            <h3>TrailMatch: Hiking Made Easy</h3>
-            <div className="slideshow-container">
-              {/* Slideshow Controls */}
-              <button className="arrow-button left-arrow" onClick={() => handleTrailMatchNavigation(-1)}>←</button>
-              <img src={trailMatchImages[trailMatchIndex]} alt="TrailMatch Project" style={{ width: '100%', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
-              <button className="arrow-button right-arrow" onClick={() => handleTrailMatchNavigation(1)}>→</button>
-            </div>
-            <p>TrailMatch harnesses the power of ChatGPT API to create an exhilarating hiking experience tailored just for you. I was responsible for the entire user interface of this project, and my team was able to secure 9th place in Esri's 8th Annual Hackathon!</p>
-          </div>
+        <div className="project">
+  <h3>TrailMatch: Hiking Made Easy</h3>
+  <div className="project-image-container">
+    {/* Slideshow Controls */}
+    <button className="arrow-button left-arrow" onClick={() => handleTrailMatchNavigation(-1)}>←</button>
+    <img src={trailMatchImages[trailMatchIndex]} alt="TrailMatch Project" />
+    <button className="arrow-button right-arrow" onClick={() => handleTrailMatchNavigation(1)}>→</button>
+  </div>
+  <p>TrailMatch harnesses the power of ChatGPT API to create an exhilarating hiking experience tailored just for you. I was responsible for the entire user interface of this project, and my team was able to secure 9th place in Esri's 8th Annual Hackathon!</p>
+</div>
 
           <div className="project">
             <h3>Bruin Bites</h3>
