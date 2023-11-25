@@ -1,43 +1,73 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Navbar from './Navbar';
+import './Navbar.css';
 import images from './images';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; // Import React Router components
+
+import Home from './home'; // Import your Home component (Create this component)
+import About from './about'; // Import your About component (Create this component)
+import Projects from './projects'; // Import your Projects component (Create this component)
+import Contact from './contact'; // Import your Contact component (Create this component)
+
 
 function App() {
   const [trailMatchIndex, setTrailMatchIndex] = useState(0);
   const trailMatchImages = [images.trailmatchImage, images.trailMatchCardImage, images.trailMatchMapImage];
+  const [scrollClass, setScrollClass] = useState('');
+
+  useEffect(() => {
+    // Function to handle scrolling and apply scroll class
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrollClass('scroll-down');
+      } else {
+        setScrollClass('');
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the listener on unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleTrailMatchNavigation = (offset) => {
     const newIndex = trailMatchIndex + offset;
     setTrailMatchIndex((newIndex + trailMatchImages.length) % trailMatchImages.length);
   };
-  
+
   return (
-    <div className="App">
-      <header className="App-header section-fade">
+    <div className={`App ${scrollClass}`}>
+      {/* <Navbar /> Place the Navbar component here */}
+      <header className={`App-header section-fade  ${scrollClass}`}> {/* Add the "navbar" class */}
         <h1>Jordan Lin</h1>
         <p>Frontend Web Application Developer</p>
       </header>
 
-      <section className="about-section section-fade">
+      <section className={`about-section section-fade ${scrollClass}`}>
         <h2>About Me</h2>
         <p>
           Hello! I'm an enthusiastic web developer dedicated to enhancing user experiences and creating visually captivating applications. I specialize in integrating Esri GIS products to vividly represent natural phenomena and modernizing existing applications to align with current market demands. With my versatile background in software development, UI/UX design, and GIS, I can contribute meaningfully and make a difference in various settings.
         </p>
       </section>
 
-      <section className="projects-section section-fade">
+      <section className={`projects-section section-fade ${scrollClass}`}>
         <h2>Projects</h2>
         <div className="project-group">
-        <div className="project">
-  <h3>TrailMatch: Hiking Made Easy</h3>
-  <div className="project-image-container">
-    {/* Slideshow Controls */}
-    <button className="arrow-button left-arrow" onClick={() => handleTrailMatchNavigation(-1)}>←</button>
-    <img src={trailMatchImages[trailMatchIndex]} alt="TrailMatch Project" />
-    <button className="arrow-button right-arrow" onClick={() => handleTrailMatchNavigation(1)}>→</button>
-  </div>
-  <p>TrailMatch harnesses the power of ChatGPT API to create an exhilarating hiking experience tailored just for you. I was responsible for the entire user interface of this project, and my team was able to secure 9th place in Esri's 8th Annual Hackathon!</p>
-</div>
+          <div className="project">
+            <h3>TrailMatch: Hiking Made Easy</h3>
+            <div className="project-image-container">
+              {/* Slideshow Controls */}
+              <button className="arrow-button left-arrow" onClick={() => handleTrailMatchNavigation(-1)}>←</button>
+              <img src={trailMatchImages[trailMatchIndex]} alt="TrailMatch Project" />
+              <button className="arrow-button right-arrow" onClick={() => handleTrailMatchNavigation(1)}>→</button>
+            </div>
+            <p>TrailMatch harnesses the power of ChatGPT API to create an exhilarating hiking experience tailored just for you. I was responsible for the entire user interface of this project, and my team was able to secure 9th place in Esri's 8th Annual Hackathon!</p>
+          </div>
 
           <div className="project">
             <h3>Bruin Bites</h3>
@@ -62,7 +92,7 @@ function App() {
         </div>
       </section>
 
-      <section className="contact-section section-fade">
+      <section className={`contact-section section-fade ${scrollClass}`}>
         <h2>Contact Me</h2>
         <p>If you're interested in collaborating or have any questions, feel free to get in touch!</p>
         <a href="mailto:jordanjlin2003@gmail.com">jordanjlin2003@gmail.com</a>
